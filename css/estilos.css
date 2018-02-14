@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+body{
+  font-family: 'Dancing Script';
+  background-color: #02010a;
+  color: black;
+}
+#contenido{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contenido General*/
+
+header{
+  background-color: #5b7989;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  animation: animacionP 3s;
+}
+h1{text-shadow: 2px #02010a;}
+.menu > a{ color: white;}
+#link {text-decoration:none;}
+
+footer{
+  background-color: #C6d5c5;
+  display: flex;
+  flex-direction: row;
+  padding: 0.2vh 1vh;
+  border-radius: 0 0 10px 10px;
+}
+#contacto, #terminos, #redes, #derechos{ width: 33.3%;}
+footer > div > div > a, footer > div > p > a, #iSecundaria > div > a {color: black; text-decoration: none;}
+
+/* Pagina Principal */
+
+#iCentral{ background-color: #82c3a6; padding: 2vh 1vh;}
+#iCentral > img {
+   margin: 1px auto;
+   display: block;
+   box-shadow: 2px 2px 5px #02010a;
+ }
+#iSecundaria{
+  background-color: #d5c75f;
+  border: 1px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 2vh 1vh;
+}
+#iSecundaria > div > img {
+  margin: 1px auto;
+  display: block;
+  box-shadow: 2px 2px 5px #02010a;
+}
+
+/* Otras Páginas*/
+
+#paisaje, #retrato{
+  background-color: #d5c75f;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+#paisaje > div > div, #retrato > div > div { padding: 2vh 1vh;}
+#paisaje > div > div > img, #retrato > div > div > img { width: 80%;}
+
+
+/*  Animaciones Generales*/
+
+@media (max-width:900px){
+  #contenido{ width: 98%;}
+  header{
+    height: 170px !important;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  #iSecundaria{
+    display: flex;
+    flex-direction: column;
+  }
+  h2{font-size: 2.5em;}
+  #iSecundaria > div > img, #iCentral > img { width: 80%;}
+  #contacto, #terminos, #redes, #derechos{ width: 98%;}
+  #paisaje, #retrato{
+    display: flex;
+    flex-direction: column;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+}
+@-webkit-keyframes animacionP{
+  0%{margin-top: 150%;}
+  60%{margin-top: -5%;}
+  100%{margin-top: 0%;}
+}
+.izquierda > img:hover{
+  transform: rotateZ(-10deg);
+  box-shadow: 2px 2px 5px #82c3a6;
+}
+.derecha > img:hover{
+  transform: translate(20px,-5px);
+  box-shadow: 2px 2px 5px #82c3a6;
+}
+.i1 {-webkit-filter: blur(10px); filter: blur(10px);}
+.i2, .i4, .i6 {-webkit-filter: grayscale(100%); filter: grayscale(100%);}
+.i3 {-webkit-filter: sepia(90%); filter: sepia(90%);}
